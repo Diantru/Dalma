@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
+    font-family: 'Pacifico';
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 3ox 3px 8px rgba(0,0,0,0.5);
+    animation: latido 1.5s infinite;
+}
+
+img {
+    margin-top: 20px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+p {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Animación tipo latido */
+@keyframes latido {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Botón personalizado */
+.btn-brillante {
+    margin-top: 20px;
+    padding: 15px, 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg, #ff4e50, #fc913a, #f9d423);
+    background-size: 300% 300%;
+    box-shadow: 0 0 15px rgba(255, 100, 150, 0.7);
+    transition: transform 0.2s ease;
+    animation: moverBrillo 3s infinite;
+}
+
+/* efecto al pasar el mouse */
+.btn-brillante:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px rgba(255, 150, 200, 1);
+}
+
+/* animación de grandiente brillante */
+@keyframes moverBrillo {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* CORAZONES */
+.corazon {
+    position: absolute;
+    font-size: 2rem;
+    color: red;
+    pointer-events: none;
+    animation: flotar 3s linear forwards;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-250px) scale(1.5) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+/* Globos */
+.globo {
+    position: absolute;
+    pointer-events: none;
+    animation: subir 4s linear forwards;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px) scale(1.2) rotate(-10deg);
+        opacity: 0;
+    }
+}
